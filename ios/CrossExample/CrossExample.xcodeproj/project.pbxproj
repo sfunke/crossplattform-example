@@ -12,6 +12,8 @@
 		4E98CBD21EB1EC710066D0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E98CBD01EB1EC710066D0B1 /* Main.storyboard */; };
 		4E98CBD41EB1EC710066D0B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E98CBD31EB1EC710066D0B1 /* Assets.xcassets */; };
 		4E98CBD71EB1EC710066D0B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E98CBD51EB1EC710066D0B1 /* LaunchScreen.storyboard */; };
+		4E98CBE11EB1EF680066D0B1 /* CPlusPlusWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4E98CBE01EB1EF680066D0B1 /* CPlusPlusWrapper.mm */; };
+		64C2BB21A5DFE1C4F3BF4B44 /* SharedCore.mm in Sources */ = {isa = PBXBuildFile; fileRef = 64C2B88BFC26EAB43DC8F91F /* SharedCore.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,11 @@
 		4E98CBD31EB1EC710066D0B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E98CBD61EB1EC710066D0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E98CBD81EB1EC710066D0B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E98CBDE1EB1EF670066D0B1 /* CrossExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrossExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E98CBDF1EB1EF680066D0B1 /* CPlusPlusWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPlusPlusWrapper.h; sourceTree = "<group>"; };
+		4E98CBE01EB1EF680066D0B1 /* CPlusPlusWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CPlusPlusWrapper.mm; sourceTree = "<group>"; };
+		64C2B2828718426DA5C3E787 /* SharedCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedCore.h; path = ../../shared/SharedCore.h; sourceTree = "<group>"; };
+		64C2B88BFC26EAB43DC8F91F /* SharedCore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SharedCore.mm; path = ../../shared/SharedCore.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +45,7 @@
 		4E98CBC01EB1EC710066D0B1 = {
 			isa = PBXGroup;
 			children = (
+				4E98CBE41EB1F12B0066D0B1 /* shared */,
 				4E98CBCB1EB1EC710066D0B1 /* CrossExample */,
 				4E98CBCA1EB1EC710066D0B1 /* Products */,
 			);
@@ -57,11 +65,23 @@
 				4E98CBCC1EB1EC710066D0B1 /* AppDelegate.swift */,
 				4E98CBCE1EB1EC710066D0B1 /* ViewController.swift */,
 				4E98CBD01EB1EC710066D0B1 /* Main.storyboard */,
+				4E98CBDF1EB1EF680066D0B1 /* CPlusPlusWrapper.h */,
+				4E98CBE01EB1EF680066D0B1 /* CPlusPlusWrapper.mm */,
 				4E98CBD31EB1EC710066D0B1 /* Assets.xcassets */,
 				4E98CBD51EB1EC710066D0B1 /* LaunchScreen.storyboard */,
 				4E98CBD81EB1EC710066D0B1 /* Info.plist */,
+				4E98CBDE1EB1EF670066D0B1 /* CrossExample-Bridging-Header.h */,
 			);
 			path = CrossExample;
+			sourceTree = "<group>";
+		};
+		4E98CBE41EB1F12B0066D0B1 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				64C2B88BFC26EAB43DC8F91F /* SharedCore.mm */,
+				64C2B2828718426DA5C3E787 /* SharedCore.h */,
+			);
+			name = shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +116,7 @@
 				TargetAttributes = {
 					4E98CBC81EB1EC710066D0B1 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +159,8 @@
 			files = (
 				4E98CBCF1EB1EC710066D0B1 /* ViewController.swift in Sources */,
 				4E98CBCD1EB1EC710066D0B1 /* AppDelegate.swift in Sources */,
+				4E98CBE11EB1EF680066D0B1 /* CPlusPlusWrapper.mm in Sources */,
+				64C2BB21A5DFE1C4F3BF4B44 /* SharedCore.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,10 +285,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CrossExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.crossexample.CrossExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CrossExample/CrossExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,10 +300,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CrossExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.crossexample.CrossExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CrossExample/CrossExample-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -301,6 +329,7 @@
 				4E98CBDD1EB1EC710066D0B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
