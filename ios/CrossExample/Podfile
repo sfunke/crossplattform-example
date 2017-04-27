@@ -6,6 +6,6 @@ target 'CrossExample' do
   use_frameworks!
 
   # Pods for CrossExample
-  pod 'OpenCV-Dynamic', '3.2.4'
+  #  pod 'OpenCV-Dynamic', '3.2.4'
 
 end

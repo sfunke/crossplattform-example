@@ -5,6 +5,15 @@
 
 cmake_minimum_required(VERSION 3.4.1)
 
+
+# OpenCV stuff
+# inspiration: https://github.com/leadrien/opencv_native_androidstudio
+# include_directories(/opt/opencv-android-sdk-v3.0/sdk/native/jni/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../OpenCV-android-sdk/sdk/native/jni/include)
+add_library( lib_opencv SHARED IMPORTED )
+set_target_properties(lib_opencv PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/../../../OpenCV-android-sdk/sdk/native/libs/${ANDROID_ABI}/libopencv_java3.so)
+
+
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
@@ -48,6 +57,9 @@ find_library( # Sets the name of the path variable.
 
 target_link_libraries( # Specifies the target library.
                        native-lib
+
+                        # OpenCV lib
+                        lib_opencv
 
                        # Links the target library to the log library
                        # included in the NDK.

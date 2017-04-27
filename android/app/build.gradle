@@ -12,7 +12,8 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags "-std=c++11"
+                cppFlags "-std=c++11 -frtti -fexceptions"
+                abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64'
             }
         }
     }
@@ -27,6 +28,13 @@ android {
             path "CMakeLists.txt"
         }
     }
+
+    sourceSets {
+        main {
+//            jniLibs.srcDirs = ['src/main/jniLibs']
+            jniLibs.srcDirs = ['./../../../OpenCV-android-sdk/sdk/native/libs']
+        }
+    }
 }
 
 dependencies {
@@ -37,4 +45,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
     testCompile 'junit:junit:4.12'
+
+    compile project(':openCVLibrary320')
+
 }
