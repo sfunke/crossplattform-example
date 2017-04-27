@@ -13,7 +13,7 @@
 		4E98CBD41EB1EC710066D0B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E98CBD31EB1EC710066D0B1 /* Assets.xcassets */; };
 		4E98CBD71EB1EC710066D0B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E98CBD51EB1EC710066D0B1 /* LaunchScreen.storyboard */; };
 		4E98CBE11EB1EF680066D0B1 /* CPlusPlusWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4E98CBE01EB1EF680066D0B1 /* CPlusPlusWrapper.mm */; };
-		64C2BB21A5DFE1C4F3BF4B44 /* SharedCore.mm in Sources */ = {isa = PBXBuildFile; fileRef = 64C2B88BFC26EAB43DC8F91F /* SharedCore.mm */; };
+		64C2BB21A5DFE1C4F3BF4B44 /* SharedCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64C2B88BFC26EAB43DC8F91F /* SharedCore.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		4E98CBDF1EB1EF680066D0B1 /* CPlusPlusWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPlusPlusWrapper.h; sourceTree = "<group>"; };
 		4E98CBE01EB1EF680066D0B1 /* CPlusPlusWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CPlusPlusWrapper.mm; sourceTree = "<group>"; };
 		64C2B2828718426DA5C3E787 /* SharedCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedCore.h; path = ../../shared/SharedCore.h; sourceTree = "<group>"; };
-		64C2B88BFC26EAB43DC8F91F /* SharedCore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SharedCore.mm; path = ../../shared/SharedCore.mm; sourceTree = "<group>"; };
+		64C2B88BFC26EAB43DC8F91F /* SharedCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SharedCore.cpp; path = ../../shared/SharedCore.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 		4E98CBE41EB1F12B0066D0B1 /* shared */ = {
 			isa = PBXGroup;
 			children = (
-				64C2B88BFC26EAB43DC8F91F /* SharedCore.mm */,
+				64C2B88BFC26EAB43DC8F91F /* SharedCore.cpp */,
 				64C2B2828718426DA5C3E787 /* SharedCore.h */,
 			);
 			name = shared;
@@ -160,7 +160,7 @@
 				4E98CBCF1EB1EC710066D0B1 /* ViewController.swift in Sources */,
 				4E98CBCD1EB1EC710066D0B1 /* AppDelegate.swift in Sources */,
 				4E98CBE11EB1EF680066D0B1 /* CPlusPlusWrapper.mm in Sources */,
-				64C2BB21A5DFE1C4F3BF4B44 /* SharedCore.mm in Sources */,
+				64C2BB21A5DFE1C4F3BF4B44 /* SharedCore.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
