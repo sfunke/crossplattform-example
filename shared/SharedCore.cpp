@@ -5,6 +5,8 @@
 
 #include "SharedCore.h"
 #include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/features2d/features2d.hpp>
 
 const char* CPP_BASE_STRING = "CPP says hello world to %s";
 
