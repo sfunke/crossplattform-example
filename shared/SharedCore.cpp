@@ -16,3 +16,11 @@ const char* concatMyStringWithCppString(const char* myString) {
     sprintf(concatenedString, CPP_BASE_STRING, myString);
     return concatenedString;
 }
+
+void processImage(cv::Mat &image) {
+    for (int k = 0; k < 2000; k++) {
+        int i = rand() % image.cols;
+        int j = rand() % image.rows;
+        image.at<uchar>(j, i) = 255;
+    }
+}

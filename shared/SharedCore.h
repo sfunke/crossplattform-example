@@ -7,6 +7,7 @@
 #define CROSSEXAMPLE_SHAREDCORE_H
 
 #include <iostream>
+#include <opencv2/core/mat.hpp>
 
 /**
  * Example Code taken from here:
@@ -18,5 +19,5 @@
  * @return an concatenated String
  */
 const char* concatMyStringWithCppString(const char* myString);
-
+void processImage(cv::Mat &image);
 #endif //CROSSEXAMPLE_SHAREDCORE_H
