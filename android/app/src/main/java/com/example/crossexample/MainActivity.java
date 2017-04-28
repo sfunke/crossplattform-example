@@ -20,9 +20,9 @@ import org.opencv.core.Mat;
 public class MainActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2 {
 
     // Used to load the 'native-lib' library on application startup.
-//    static {
-//        System.loadLibrary("native-lib");
-//    }
+    static {
+        System.loadLibrary("native-lib");
+    }
 
     private CameraBridgeViewBase _cameraBridgeViewBase;
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
                     Log.i("MAINACTIVITY", "OpenCV loaded successfully");
                     // Load ndk built module, as specified in moduleName in build.gradle
                     // after opencv initialization
-                    System.loadLibrary("native-lib");
+//                    System.loadLibrary("native-lib");
                     _cameraBridgeViewBase.enableView();
                 }
                 break;
@@ -48,15 +48,15 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_main);
 
-        // Permissions for Android 6+
-        ActivityCompat.requestPermissions(MainActivity.this,
-                new String[]{Manifest.permission.CAMERA},
-                1);
+        if(ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED) {
+            // Permissions for Android 6+
+            ActivityCompat.requestPermissions(MainActivity.this,
+                    new String[]{Manifest.permission.CAMERA},
+                    1);
+        }
 
         _cameraBridgeViewBase = (CameraBridgeViewBase) findViewById(R.id.cameraView);
         _cameraBridgeViewBase.setVisibility(SurfaceView.VISIBLE);
@@ -124,9 +124,9 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     }
 
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
-        Mat matGray = inputFrame.gray();
-        processFrame(matGray.getNativeObjAddr());
-        return matGray;
+        Mat rgba = inputFrame.rgba();
+        processFrame(rgba.getNativeObjAddr());
+        return rgba;
     }
 
 

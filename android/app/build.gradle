@@ -14,7 +14,10 @@ android {
             cmake {
                 cppFlags "-std=c++11 -frtti -fexceptions"
 //                abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64'
-                abiFilters 'x86' // emulator only
+                abiFilters 'x86', 'armeabi-v7a' // emiulator and nexus 5
+//                abiFilters 'x86' // emulator only
+                // to_string support in c++ http://stackoverflow.com/a/41620520/1128600
+                arguments "-DANDROID_STL=c++_shared"
             }
         }
     }
@@ -52,8 +55,8 @@ android {
             reset()
 
             // Specifies a list of ABIs that Gradle should create APKs for.
-//            include "x86", "armeabi-v7a", "mips"
-            include "x86"  // emulator only
+            include "x86", "armeabi-v7a", "mips"
+//            include "x86"  // emulator only
 
             // Specifies that we do not want to also generate a universal APK that includes all ABIs.
             universalApk false

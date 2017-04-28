@@ -14,6 +14,10 @@
 		4E98CBD41EB1EC710066D0B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E98CBD31EB1EC710066D0B1 /* Assets.xcassets */; };
 		4E98CBD71EB1EC710066D0B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E98CBD51EB1EC710066D0B1 /* LaunchScreen.storyboard */; };
 		4E98CBE11EB1EF680066D0B1 /* CPlusPlusWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4E98CBE01EB1EF680066D0B1 /* CPlusPlusWrapper.mm */; };
+		4ED633C71EB37A0000B532C8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED633C61EB37A0000B532C8 /* AVFoundation.framework */; };
+		4ED633C91EB37A1600B532C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED633C81EB37A1600B532C8 /* QuartzCore.framework */; };
+		4ED633CF1EB37A5200B532C8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED633CE1EB37A5200B532C8 /* CoreMedia.framework */; };
+		4ED633D11EB37B1000B532C8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED633CC1EB37A4800B532C8 /* AssetsLibrary.framework */; };
 		64C2BB21A5DFE1C4F3BF4B44 /* SharedCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64C2B88BFC26EAB43DC8F91F /* SharedCore.cpp */; };
 		E537D74FABA7B1E4AAA7B8F1 /* Pods_CrossExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D355BEAC27868936F6B4B6 /* Pods_CrossExample.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +34,11 @@
 		4E98CBDE1EB1EF670066D0B1 /* CrossExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrossExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		4E98CBDF1EB1EF680066D0B1 /* CPlusPlusWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPlusPlusWrapper.h; sourceTree = "<group>"; };
 		4E98CBE01EB1EF680066D0B1 /* CPlusPlusWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CPlusPlusWrapper.mm; sourceTree = "<group>"; };
+		4ED633C61EB37A0000B532C8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4ED633C81EB37A1600B532C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4ED633CA1EB37A3C00B532C8 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		4ED633CC1EB37A4800B532C8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		4ED633CE1EB37A5200B532C8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		64C2B2828718426DA5C3E787 /* SharedCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedCore.h; path = ../../shared/SharedCore.h; sourceTree = "<group>"; };
 		64C2B88BFC26EAB43DC8F91F /* SharedCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SharedCore.cpp; path = ../../shared/SharedCore.cpp; sourceTree = "<group>"; };
 		7B82E0DD07084C66DF9680D8 /* Pods-CrossExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossExample/Pods-CrossExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +51,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED633D11EB37B1000B532C8 /* AssetsLibrary.framework in Frameworks */,
+				4ED633CF1EB37A5200B532C8 /* CoreMedia.framework in Frameworks */,
+				4ED633C91EB37A1600B532C8 /* QuartzCore.framework in Frameworks */,
+				4ED633C71EB37A0000B532C8 /* AVFoundation.framework in Frameworks */,
 				4E7988C91EB24A7500C356DF /* opencv2.framework in Frameworks */,
 				E537D74FABA7B1E4AAA7B8F1 /* Pods_CrossExample.framework in Frameworks */,
 			);
@@ -107,6 +120,11 @@
 		98E31EF443379970E7BBDF01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4ED633CE1EB37A5200B532C8 /* CoreMedia.framework */,
+				4ED633CC1EB37A4800B532C8 /* AssetsLibrary.framework */,
+				4ED633CA1EB37A3C00B532C8 /* CoreVideo.framework */,
+				4ED633C81EB37A1600B532C8 /* QuartzCore.framework */,
+				4ED633C61EB37A0000B532C8 /* AVFoundation.framework */,
 				96D355BEAC27868936F6B4B6 /* Pods_CrossExample.framework */,
 			);
 			name = Frameworks;
@@ -147,6 +165,7 @@
 				TargetAttributes = {
 					4E98CBC81EB1EC710066D0B1 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2CA4QTN6N7;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -366,6 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2CA4QTN6N7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -387,6 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2CA4QTN6N7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
